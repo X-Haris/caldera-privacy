@@ -49,7 +49,7 @@
   <div class="wrap">
     <header>
       <h1>Caldera — Privacy Policy</h1>
-      <p class="muted">Effective date: 29 September 2026 &nbsp;·&nbsp; Last updated: 29 September 2026</p>
+      <p class="muted">Effective date: 29 September 2026 &nbsp;·&nbsp; Last updated: 2 October 2026</p>
     </header>
 
     <p>
@@ -71,6 +71,7 @@
         <li>We use <strong>Firebase Analytics</strong> to see how the Game is played and <strong>Firebase Crashlytics</strong> to find crashes. We never set a user ID.</li>
         <li>The Game shows ads through <strong>Google AdMob</strong>, which uses your device's advertising ID. Rewarded ads only play when you choose to watch one.</li>
         <li>Players in Europe and the UK are asked before personalised ads are shown, and can change their answer in <strong>Settings → Ad Preferences</strong>.</li>
+        <li>In-game purchases go through <strong>Google Play</strong>. We never see your card or payment details.</li>
         <li>The Game <strong>never</strong> asks for your location, camera, microphone, contacts or files, and never shows a permission prompt.</li>
         <li>We do <strong>not</strong> sell your personal information.</li>
       </ul>
@@ -178,6 +179,7 @@
     <ul>
       <li>your souls, the drones you own and the drone you fly;</li>
       <li>your permanent upgrades;</li>
+      <li>your purchases: whether you own the Starter Pack and Remove Ads, and the purchase tokens Google Play issued, which the Game keeps so that no purchase is paid out twice;</li>
       <li>your control choice (touch or joystick);</li>
       <li>your music and sound-effect volumes, and whether haptic feedback is on;</li>
       <li>the total time the Game has been open, which is used to space out full-screen ads.</li>
@@ -192,7 +194,7 @@
     <p>
       The Game switches off Android's cloud backup, so your progress is <strong>not</strong> copied to
       your Google account, and we never hold a copy of it. If you uninstall the Game or clear its data,
-      your progress cannot be restored. On Android 12 and later, Android may still copy the Game's data
+      your progress cannot be restored. The exception is what you bought: Google Play keeps a record of your purchases on your Google account, so Remove Ads and the Starter Pack come back after a reinstall (Soul Gem packs are used up when delivered and are not restored). On Android 12 and later, Android may still copy the Game's data
       to a new phone during a direct phone-to-phone transfer.
     </p>
 
@@ -203,6 +205,7 @@
       <li>use your <strong>camera</strong> or <strong>microphone</strong>, or access your contacts, calendar, photos or files;</li>
       <li>require an account, a sign-in, a name or an email address;</li>
       <li>set a Firebase user ID, or send your name, email address or other personal details to Analytics or Crashlytics;</li>
+      <li>see, receive or store your <strong>card or other payment details</strong>: purchases are made through Google Play, which collects them itself under its own terms;</li>
       <li>show a permission prompt: every permission in section 3 is granted when you install the Game.</li>
     </ul>
 
@@ -215,6 +218,7 @@
       <tr><td><code>ACCESS_ADSERVICES_AD_ID</code><br /><code>ACCESS_ADSERVICES_ATTRIBUTION</code><br /><code>ACCESS_ADSERVICES_TOPICS</code></td><td>Included by Google's advertising SDK for Android's Privacy Sandbox advertising features, where your device supports them (section 2b).</td></tr>
       <tr><td><code>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td>Lets Firebase Analytics read which Google Play campaign or link the Game was installed from, if any.</td></tr>
       <tr><td><code>WAKE_LOCK</code><br /><code>FOREGROUND_SERVICE</code></td><td>Included by Google's SDKs so they can finish short background tasks, such as sending queued reports.</td></tr>
+      <tr><td><code>com.android.vending.BILLING</code></td><td>Lets the Game offer in-game purchases through Google Play. Payment is handled by Google Play, not by the Game.</td></tr>
     </table>
 
     <h2>4. How information is shared</h2>
@@ -228,6 +232,7 @@
       <tr><td>Firebase Crashlytics</td><td>Crash reports and stability</td></tr>
       <tr><td>Google AdMob / Google Mobile Ads SDK</td><td>Serving, limiting and measuring ads</td></tr>
       <tr><td>Google User Messaging Platform</td><td>Asking for and recording advertising consent where it is required</td></tr>
+      <tr><td>Google Play (billing)</td><td>Taking payment for in-game purchases and keeping your purchase records</td></tr>
     </table>
     <p class="muted">
       We may also disclose information if required by law, or to protect the rights, safety, and
@@ -238,7 +243,7 @@
     <p>
       Analytics and crash reports are retained according to the retention settings and terms of those
       Firebase services. Advertising and consent data collected by Google is retained according to
-      Google's retention periods. Data stored only on your device remains until you uninstall the Game
+      Google's retention periods. Purchase records held by Google Play are kept under Google Play's terms. Data stored only on your device remains until you uninstall the Game
       or clear its data.
     </p>
 
@@ -247,7 +252,8 @@
       Because the Game has no accounts and no server, you control your data directly:
     </p>
     <ul>
-      <li><strong>All on-device data</strong> (progress, settings and ad timing) is deleted when you uninstall the Game or clear its data in your device settings. This also resets the Game's Firebase identifiers on your device, but does not delete reports that were already sent.</li>
+      <li><strong>All on-device data</strong> (progress, settings, purchase tokens and ad timing) is deleted when you uninstall the Game or clear its data in your device settings. This also resets the Game's Firebase identifiers on your device, but does not delete reports that were already sent.</li>
+      <li><strong>Purchases</strong>: your purchase history is kept by Google Play on your Google account, not by us, so uninstalling the Game does not delete it. You can see it in your Google Play account.</li>
       <li><strong>Advertising ID</strong>: you can reset or delete it, or turn off ad personalisation, in your device's Google settings ("Ads" under Google settings). Deleting your advertising ID stops personalised advertising.</li>
       <li><strong>Ad consent</strong> (where it applies): you can review and change your answer at any time from <strong>Settings → Ad Preferences</strong> in the Game. Clearing the Game's data also clears it, and the form asks again the next time you play.</li>
       <li>If you have any other request about your data, email <a href="mailto:support@abduloski.dev">support@abduloski.dev</a> and we will act on it.</li>
