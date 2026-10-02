@@ -67,7 +67,7 @@
       <h2>The short version</h2>
       <ul>
         <li>There is <strong>no account</strong> and no sign-in. We never ask for your name or email.</li>
-        <li>Your progress and settings stay <strong>on your device</strong>. We run <strong>no server</strong> of our own.</li>
+        <li>Your progress and settings stay <strong>on your device</strong>, apart from the backup copy Android can make in your own Google account (section 2d). We run <strong>no server</strong> of our own.</li>
         <li>We use <strong>Firebase Analytics</strong> to see how the Game is played and <strong>Firebase Crashlytics</strong> to find crashes. We never set a user ID.</li>
         <li>The Game shows ads through <strong>Google AdMob</strong>, which uses your device's advertising ID. Rewarded ads only play when you choose to watch one.</li>
         <li>Players in Europe and the UK are asked before personalised ads are shown, and can change their answer in <strong>Settings → Ad Preferences</strong>.</li>
@@ -174,7 +174,7 @@
     <h3>c. Information stored only on your device</h3>
     <p>
       Everything the Game remembers about your play is stored in its private storage on your device
-      and is never uploaded to us:
+      and is never uploaded to us (Android's own backup is described in d below):
     </p>
     <ul>
       <li>your souls, the drones you own and the drone you fly;</li>
@@ -186,16 +186,21 @@
     </ul>
     <p>
       Google's consent, advertising and Firebase SDKs also keep their own settings and identifiers on
-      your device. All of this is removed when you uninstall the Game or clear its data in your device
+      your device. All of this is removed from your device when you uninstall the Game or clear its data in your device
       settings.
     </p>
 
     <h3>d. Device backup</h3>
     <p>
-      The Game switches off Android's cloud backup, so your progress is <strong>not</strong> copied to
-      your Google account, and we never hold a copy of it. If you uninstall the Game or clear its data,
-      your progress cannot be restored. The exception is what you bought: Google Play keeps a record of your purchases on your Google account, so Remove Ads and the Starter Pack come back after a reinstall (Soul Gem packs are used up when delivered and are not restored). On Android 12 and later, Android may still copy the Game's data
-      to a new phone during a direct phone-to-phone transfer.
+      The Game lets Android back up its save file, and nothing else. If Google backup is turned on in
+      your device settings, Android can copy that one file, which holds everything listed in c above,
+      to your own Google account, and put it back when you reinstall the Game or set up a new phone.
+      Google holds that copy under its own terms; we never see or hold it. The Game's advertising,
+      consent and Firebase files are not part of it. Android makes the copy about once a day, so very
+      recent progress can be missing from a restore, and if there is no backup to restore, a reinstall
+      starts your progress over. Remove Ads and the Starter Pack come back from Google Play either way;
+      Soul Gem packs are used up when delivered, so only a backup can bring one back. On Android 12 and
+      later the same file may also be copied to a new phone during a direct phone-to-phone transfer.
     </p>
 
     <h3>e. What the Game does not collect</h3>
@@ -233,6 +238,7 @@
       <tr><td>Google AdMob / Google Mobile Ads SDK</td><td>Serving, limiting and measuring ads</td></tr>
       <tr><td>Google User Messaging Platform</td><td>Asking for and recording advertising consent where it is required</td></tr>
       <tr><td>Google Play (billing)</td><td>Taking payment for in-game purchases and keeping your purchase records</td></tr>
+      <tr><td>Android backup (Google)</td><td>Keeping a copy of your progress file in your own Google account so it can be restored</td></tr>
     </table>
     <p class="muted">
       We may also disclose information if required by law, or to protect the rights, safety, and
@@ -243,7 +249,7 @@
     <p>
       Analytics and crash reports are retained according to the retention settings and terms of those
       Firebase services. Advertising and consent data collected by Google is retained according to
-      Google's retention periods. Purchase records held by Google Play are kept under Google Play's terms. Data stored only on your device remains until you uninstall the Game
+      Google's retention periods. Purchase records held by Google Play are kept under Google Play's terms. A backup copy of your progress kept in your Google account is retained under Google's terms until you delete it. Data stored only on your device remains until you uninstall the Game
       or clear its data.
     </p>
 
@@ -253,6 +259,7 @@
     </p>
     <ul>
       <li><strong>All on-device data</strong> (progress, settings, purchase tokens and ad timing) is deleted when you uninstall the Game or clear its data in your device settings. This also resets the Game's Firebase identifiers on your device, but does not delete reports that were already sent.</li>
+      <li><strong>Backup copy</strong>: if Android's backup made a copy of your progress, it is kept in your Google account, not by us, so uninstalling the Game does not delete it. You can manage or delete your device backups in your Google account.</li>
       <li><strong>Purchases</strong>: your purchase history is kept by Google Play on your Google account, not by us, so uninstalling the Game does not delete it. You can see it in your Google Play account.</li>
       <li><strong>Advertising ID</strong>: you can reset or delete it, or turn off ad personalisation, in your device's Google settings ("Ads" under Google settings). Deleting your advertising ID stops personalised advertising.</li>
       <li><strong>Ad consent</strong> (where it applies): you can review and change your answer at any time from <strong>Settings → Ad Preferences</strong> in the Game. Clearing the Game's data also clears it, and the form asks again the next time you play.</li>
